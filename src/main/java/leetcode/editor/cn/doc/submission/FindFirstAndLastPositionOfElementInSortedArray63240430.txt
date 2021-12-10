@@ -1,0 +1,30 @@
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+
+        def lower(nums, target, l, r):
+            while l < r:
+                mid = l + (r - l) // 2
+                if nums[mid] >= target:
+                    r = mid
+                else:
+                    l = mid + 1
+            return l
+
+        def upper(nums, target, l, r):
+            while l < r:
+                mid = l + (r - l) // 2
+                if nums[mid] > target:
+                    r = mid
+                else:
+                    l = mid + 1
+            return l
+        
+        if target not in nums:
+            return[-1, -1]
+        low = lower(nums, target, 0, len(nums))
+        up = upper(nums, target, 0, len(nums))
+
+        return [low, up - 1]
+            
+# runtime:36 ms
+# memory:14.2 MB
