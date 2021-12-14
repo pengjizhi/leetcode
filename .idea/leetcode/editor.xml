@@ -39,6 +39,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/Sqrtx.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/Sqrtx.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/Sqrtx.java" />
+              <option name="questionId" value="69" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/TwoSum.java">
           <value>
             <LeetcodeEditor>
@@ -54,6 +63,15 @@
               <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/ValidParentheses.md" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/ValidParentheses.java" />
               <option name="questionId" value="20" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/ValidPerfectSquare.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/ValidPerfectSquare.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/ValidPerfectSquare.java" />
+              <option name="questionId" value="367" />
             </LeetcodeEditor>
           </value>
         </entry>
