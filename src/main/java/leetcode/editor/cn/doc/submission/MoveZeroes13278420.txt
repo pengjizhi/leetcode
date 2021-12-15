@@ -1,0 +1,16 @@
+class Solution:
+    def moveZeroes(self, nums: 'List[int]') -> 'None':
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        # 复制非０，添加０
+        length = len(nums)
+        new_id = 0
+        
+        for i in range(length):
+            if nums[i] != 0:
+                nums[new_id] = nums[i]
+                new_id += 1
+        nums[new_id:] = [0] * (length - new_id)
+# runtime:68 ms
+# memory:7.8 MB

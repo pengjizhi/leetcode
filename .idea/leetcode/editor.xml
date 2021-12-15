@@ -30,6 +30,33 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/MoveZeroes.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/MoveZeroes.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/MoveZeroes.java" />
+              <option name="questionId" value="283" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/RemoveDuplicatesFromSortedArray.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/RemoveDuplicatesFromSortedArray.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/RemoveDuplicatesFromSortedArray.java" />
+              <option name="questionId" value="26" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/RemoveElement.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/RemoveElement.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/RemoveElement.java" />
+              <option name="questionId" value="27" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/SearchInsertPosition.java">
           <value>
             <LeetcodeEditor>
