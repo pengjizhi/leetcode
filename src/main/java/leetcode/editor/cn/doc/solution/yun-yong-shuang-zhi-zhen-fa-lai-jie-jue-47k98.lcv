@@ -1,0 +1,61 @@
+### 解题思路
+
+- 由于题目要求递增顺序返回结果
+- 运用双指针法，比较两个数字，哪个最大，放哪个，放是在队首放，而不是在队尾放，所以用的是unshift
+- 如果题目要求是按照递减顺序返回结果的话，那就是代码-按照递减顺序返回结果的实现
+
+### 代码-按照递增顺序返回结果
+
+* javascript
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var sortedSquares = function (nums) {
+  let left = 0, right = nums.length - 1;
+  let result = []
+  while (left <= right) {
+    let absLeft = Math.abs(nums[left])
+    let absRight = Math.abs(nums[right])
+    if (absLeft > absRight) {
+      result.unshift(absLeft * absLeft)
+      left++
+    } else {
+      result.unshift(absRight * absRight)
+      right--
+    }
+  }
+  return result
+};
+```
+
+### 代码-按照递减顺序返回结果
+
+* javascript
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var sortedSquares = function (nums) {
+  let left = 0,
+    right = nums.length - 1;
+  let result = [];
+  while (left <= right) {
+    let absLeft = Math.abs(nums[left]);
+    let absRight = Math.abs(nums[right]);
+    if (absLeft < absRight) {
+      result.push(absRight * absRight);
+      right--;
+    } else {
+      result.push(absLeft * absLeft);
+      left++;
+    }
+  }
+  return result;
+};
+```
+

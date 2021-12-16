@@ -1,0 +1,85 @@
+### 全行注解，方便理解~
+
+### 2021/12/03
+
+### 方法一：优先队列
+
+每次设计到排序且每次操作后又重新排序的题目，就容易想到利用优先队列~~~~
+![image.png](https://pic.leetcode-cn.com/1638495268-Bngtnx-image.png)
+
+### 代码
+
+* java
+
+```java
+class Solution {
+    public int[] sortedSquares(int[] nums) {
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+        for(int num : nums){
+            //直接将平法后的元素值加入到了队列中
+            queue.add(num*num);
+        }
+        int [] ans = new int[nums.length];
+        int i = 0;
+        while (!queue.isEmpty()){
+            ans[i++] = queue.poll();
+        }
+        return ans;
+    }
+}
+```
+
+### 方法二：简单模拟
+
+优先队列每次操作都要在内部进行排序，就这题而言就显得有点浪费时间了~  
+直接遍历数组后，最后进行排序即可节约大量时间！
+![image.png](https://pic.leetcode-cn.com/1638495731-ijhdTU-image.png)
+
+* java
+
+```java
+class Solution {
+    public static int[] sortedSquaresBetter(int[] nums) {
+        for (int i = 0;i < nums.length;i++){
+            nums[i] *= nums[i];
+        }
+        Arrays.sort(nums);
+        return nums;
+    }
+}
+```
+
+### 方法三：双指针
+
+优先队列和简单模拟都没有体现出已知nums升序序列的条件~  
+我们可以已知如果数组 nums 中的所有数都是非负数，那么将每个数平方后，数组仍然保持升序;如果数组 nums 中的所有数都是负数，那么将每个数平方后，数组会保持降序!
+其实主要就是判断元素是否为负，因为只有元素为负数时，平方后的顺序才会发生改变~利用双指针，首指针指从小到大遍历，尾指针从大到小遍历~相继比较平方后的值判断大小，大的放在current下标对应的元素位置上！！！！
+
+#### 这就可以利用双指针思想~
+
+![image.png](https://pic.leetcode-cn.com/1638496725-BKFyDh-image.png)
+
+* java
+
+```java
+class Solution {
+    int length = nums.length;
+        int [] ans = new int[length];
+        //定义current给ans从大往小进行赋值！
+        int current = length - 1;
+        for(int i = 0,j = length - 1;i <= j;){
+            if(nums[i] * nums[i] > nums[j] * nums[j]){
+                //说明 i对应的元素是负数，且该负数的绝对值比current下标所对应的元素绝对值大！！！
+                ans[current] = nums[i] * nums[i];
+                ++i;
+            }else{
+                //说明 i对应的元素是非负数，且该非负数比current下标所对应的元素小！！！
+                ans[current] = nums[j] * nums[j];
+                --j;
+            }
+            --current;
+        }
+        return ans;
+}
+```
+
