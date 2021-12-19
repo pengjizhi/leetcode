@@ -79,7 +79,7 @@ public class FruitIntoBaskets {
         public int totalFruit(int[] fruits) {
             //本题题意实在是难以理解，可以理解为本题在求只包含两个元素的最长子序列
             /**
-             *  1. 滑动窗口，另外需要建立一个hashset保存窗口中每个元素和出现的次数，当元素次数为0时，remove
+             *  1. 滑动窗口，另外需要建立一个hashMap保存窗口中每个元素和出现的次数，当元素次数为0时，remove
              *  2. 当hashset的size > 2时，进入循环，left一直往前进，每前进一次，hashset的该v对应-1
              */
             Map<Integer, Integer> map = new HashMap<>();

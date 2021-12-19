@@ -57,6 +57,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/MinimumWindowSubstring.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/MinimumWindowSubstring.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/MinimumWindowSubstring.java" />
+              <option name="questionId" value="76" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/MoveZeroes.java">
           <value>
             <LeetcodeEditor>
