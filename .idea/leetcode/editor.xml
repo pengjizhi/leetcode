@@ -30,6 +30,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/DesignLinkedList.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/DesignLinkedList.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/DesignLinkedList.java" />
+              <option name="questionId" value="838" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/FindFirstAndLastPositionOfElementInSortedArray.java">
           <value>
             <LeetcodeEditor>
@@ -90,6 +99,15 @@
               <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/RemoveElement.md" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/RemoveElement.java" />
               <option name="questionId" value="27" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/RemoveLinkedListElements.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/RemoveLinkedListElements.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/RemoveLinkedListElements.java" />
+              <option name="questionId" value="203" />
             </LeetcodeEditor>
           </value>
         </entry>
