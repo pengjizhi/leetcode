@@ -1,0 +1,146 @@
+今天是我坚持写题解的第 116 天！
+
+# 方法一、滑动窗口
+
+今天这道题比较简单，我们可以采用滑动窗口来求解。
+
+我们先统计出字符串 p 中每个字符的词频数，再把 p 的长度作为滑动窗口的宽度，把这个窗口在字符串 s 中移动，统计窗口中的词频数，如果在移动的过程中，窗口中的词频数与 p 的词频数相等，那么，这个窗口就是 p 的一个异位词。
+
+举个例子，假设`s = "cbaebabacd", p = "abc"`，运算的过程如下：
+
+![image-20211128090548278](https://pic.leetcode-cn.com/1638063958-WzvElV-file_1638063958629)
+
+请看代码：
+
+* java
+
+```java
+class Solution {
+    public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> ans = new ArrayList<>();
+        int m = s.length();
+        int n = p.length();
+
+        if (m < n) {
+            // 如果s没p长，直接返回空列表
+            return ans;
+        }
+
+        int[] sCnt = new int[26];
+        int[] pCnt = new int[26];
+        
+        for (int i = 0; i < n; i++) {
+            sCnt[s.charAt(i) - 'a']++;
+            pCnt[p.charAt(i) - 'a']++;
+        }
+
+        if (Arrays.equals(sCnt, pCnt)) {
+            // 初始窗口就相等
+            ans.add(0);
+        }
+
+        for (int i = 0; i < m - n; i++) {
+            // 窗口右移
+            sCnt[s.charAt(i) - 'a']--;
+            sCnt[s.charAt(i + n) - 'a']++;
+
+            if (Arrays.equals(sCnt, pCnt)) {
+                ans.add(i + 1);
+            }
+        }
+
+        return ans;
+    }
+}
+```
+
+- 时间复杂度：$O(m + (m - n) * C)$，m 为总的遍历次数，C 固定为 26，窗口个数为 $(m-n+1)$，每个窗口都要做字符串比较，比较的时间复杂度为$O(C)$，所以，去掉常数项，总的时间复杂度为 $O(m + (m - n) * C)$。
+- 空间复杂度：$O(C)$。
+
+运行结果如下：
+
+![image-20211128091806452](https://pic.leetcode-cn.com/1638063958-MoVBVh-file_1638063958443)
+
+# 方法二、优化
+
+方法一中，每次都要做两个数组的比较，时间效率是比较慢的，那么，我们有没有什么方法可以减少这种数组比较的次数呢？
+
+答案是肯定的。
+
+一般来说，针对这种词频统计相关的题目，我们都可以把两个词频表合成一个，即一个字符串往词频里面加次数，另一个字符串往词频里面减次数，再加一个变量记录词频差异数，如果差异数为 0，说明两个字符串互为异位词。
+
+请看代码：
+
+* java
+
+```java
+class Solution {
+    public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> ans = new ArrayList<>();
+        int m = s.length();
+        int n = p.length();
+
+        if (m < n) {
+            return ans;
+        }
+
+        int[] cnt = new int[26];
+        // diff记录的是差异的字符类别数，不是字符个数
+        int diff = 0;
+        
+        for (int i = 0; i < n; i++) {
+            cnt[s.charAt(i) - 'a']++;
+            cnt[p.charAt(i) - 'a']--;
+        }
+
+        for (int i = 0; i < 26; i++) {
+            if (cnt[i] != 0) {
+                // 统计差异数
+                diff++;
+            }
+        }
+
+        if (diff == 0) {
+            ans.add(0);
+        }
+
+        for (int i = 0; i < m - n; i++) {
+            if (--cnt[s.charAt(i) - 'a'] == 0) {
+                // 移除窗口左边的字符后，这个字符的词频数变成了0，diff减1
+                diff--;
+            } else if (cnt[s.charAt(i) - 'a'] == -1) {
+                // 这个字符的词频数变成-1，说明原来是0，diff加1
+                diff++;
+            }
+
+            if (++cnt[s.charAt(i + n) - 'a'] == 1) {
+                // 增加窗口右边的字符后，这个字符的词频数变成了1，diff加1
+                diff++;
+            } else if (cnt[s.charAt(i + n) - 'a'] == 0) {
+                // 这个字符的词频数变成0，说明原来是-1，diff减1
+                diff--;
+            }
+
+            if (diff == 0) {
+                // 注意，diff统计的是差异的字符类别，等于0说明不存在差异的字符，可以直接加入答案
+                ans.add(i + 1);
+            }
+        }
+
+        return ans;
+    }
+}
+```
+
+- 时间复杂度：$O(m + C)$，m 为总的遍历次数，C 固定为 26，第一次统计差异数为 $O(C)$。
+- 空间复杂度：$O(C)$。
+
+运行结果如下，速度变慢了，取决于样例大小，且虽然时间复杂度降下来了，但是多了很多计算量，比如那些比较，也是需要耗时的：
+
+![image-20211128094307104](https://pic.leetcode-cn.com/1638063958-ILiacV-file_1638063958509)
+
+# 最后
+
+**如果对你有帮助，请点个赞吧，谢谢^^**
+
+也可以[关注我](https://leetcode-cn.com/u/tong-zhu/)（公号：彤哥来刷题啦），每日分享题解，一起刷题，一起拿全家桶。

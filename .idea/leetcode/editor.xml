@@ -39,6 +39,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/FindAllAnagramsInAString.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/FindAllAnagramsInAString.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/FindAllAnagramsInAString.java" />
+              <option name="questionId" value="438" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/FindFirstAndLastPositionOfElementInSortedArray.java">
           <value>
             <LeetcodeEditor>
@@ -63,6 +72,24 @@
               <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/GroupAnagrams.md" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/GroupAnagrams.java" />
               <option name="questionId" value="49" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/IntersectionOfTwoArrays.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/IntersectionOfTwoArrays.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/IntersectionOfTwoArrays.java" />
+              <option name="questionId" value="349" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/IntersectionOfTwoArraysIi.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/IntersectionOfTwoArraysIi.md" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/IntersectionOfTwoArraysIi.java" />
+              <option name="questionId" value="350" />
             </LeetcodeEditor>
           </value>
         </entry>

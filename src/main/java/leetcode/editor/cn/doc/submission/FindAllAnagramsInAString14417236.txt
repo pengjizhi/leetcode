@@ -1,0 +1,27 @@
+class Solution:
+    def findAnagrams(self, s: str, p: str) -> List[int]:
+        """
+        采用滑动窗口的办法，一个大窗口不变，是s串，一个小窗口是长度和p相等的串，在s上滑动，只要小串中的所有字母的频度和p相等，就说明匹配上了，把开头的索引加入结果。
+        首先要建立p串的频度 
+        这个滑动窗口的方法实际上与我第一次的方法意思相同，不同的是有个计算频度的数组，这样已经计算过的字母不用重复计算，都保存在数组里。而我最原始的方法，也是滑动窗口，只是没滑动一次，都要重复计算小切片里与p对比是否是字母异构词，所以把时间复杂度从O(N**2)减少到O(n)
+        """
+        res = []
+        slen, plen = len(s), len(p)
+        s_count, p_count = [0] * 26, [0] *26 # 这两个数组，其中s_count是用来保存一直在变动的小串的字母频度的，p_count只在一开始计算了p字符串的频度，后面用作对比使用，s_count会一直变化，有个一直增加的右边界end，一开始，这个end没有超过p的长度，那么s_count中相应频度增加，后来end开始超过，那么每一次，都要把小窗口最左边的字母的频度减一，然后把右边界的频度加一。每一次循环，做一次对比。
+        
+        for i in range(plen):
+            p_count[ord(p[i]) - 97] += 1
+        
+        for end in range(slen):
+            if end >= plen:
+                s_count[ord(s[end - plen]) - 97] -= 1
+                
+            s_count[ord(s[end]) -97] += 1
+            
+            if s_count == p_count:
+                res.append(end - plen + 1)
+        
+        
+        return res
+# runtime:132 ms
+# memory:13.8 MB
