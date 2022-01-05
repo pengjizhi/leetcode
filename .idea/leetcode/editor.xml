@@ -117,7 +117,10 @@
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/IntersectionOfTwoLinkedListsLcci.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com面试题 02.07" />
+              <option name="host" value="leetcode-cn.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/IntersectionOfTwoLinkedListsLcci.java" />
+              <option name="titleSlug" value="intersection-of-two-linked-lists-lcci" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -125,7 +128,10 @@
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/LinkedListCycleIi.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com142" />
+              <option name="host" value="leetcode-cn.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/LinkedListCycleIi.java" />
+              <option name="titleSlug" value="linked-list-cycle-ii" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -203,7 +209,10 @@
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/ReverseLinkedList.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com206" />
+              <option name="host" value="leetcode-cn.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/ReverseLinkedList.java" />
+              <option name="titleSlug" value="reverse-linked-list" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -260,7 +269,10 @@
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/SpiralMatrix.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com54" />
+              <option name="host" value="leetcode-cn.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/SpiralMatrix.java" />
+              <option name="titleSlug" value="spiral-matrix" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -268,7 +280,10 @@
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/doc/content/SpiralMatrixIi.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com59" />
+              <option name="host" value="leetcode-cn.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/leetcode/editor/cn/SpiralMatrixIi.java" />
+              <option name="titleSlug" value="spiral-matrix-ii" />
             </LeetcodeEditor>
           </value>
         </entry>

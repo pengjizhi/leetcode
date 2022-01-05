@@ -1,0 +1,10 @@
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        string_list = s.split()
+        string_list.reverse()
+        res = ' '.join(string_list)
+        # print(string_list)
+        # print(res)
+        return res
+# runtime:40 ms
+# memory:13.6 MB
