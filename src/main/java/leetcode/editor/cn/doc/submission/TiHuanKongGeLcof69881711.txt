@@ -1,0 +1,5 @@
+class Solution:
+    def replaceSpace(self, s: str) -> str:
+        return s.replace(" ", '%20')
+# runtime:36 ms
+# memory:13.4 MB

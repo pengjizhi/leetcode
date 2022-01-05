@@ -1,0 +1,10 @@
+class Solution:
+    def replaceSpace(self, s: str) -> str:
+        seen = list(s)
+        for i in range(len(seen)):
+            # print(seen[i])
+            if seen[i] == ' ':
+                seen[i] = '%20'
+        return ''.join(seen)
+# runtime:36 ms
+# memory:13.3 MB

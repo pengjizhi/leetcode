@@ -67,8 +67,8 @@ public class RemoveElement{
     public static void main(String[] args) {
         Solution solution = new RemoveElement().new Solution();
         // TO TEST
-        int[] nums = {};
-        int val = 0;
+        int[] nums = {0,1,2,2,3,0,4,2};
+        int val = 2;
         int result = solution.removeElement(nums, val);
         System.out.println(result);
         System.out.println(Arrays.toString(nums));
