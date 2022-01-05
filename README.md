@@ -293,7 +293,7 @@ public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
 
 ### 环形链表：不仅仅要判断链表是否有环，还要判断交点在哪，实际上这是一个数学问题，有没有环可以用快慢指针判断，然后用快指针走过的路程是慢指针的2倍列出等式，可以得出等式关系
 
-![image-20220105224027339](/Users/pengjizhi/Nutstore Files/开发/leetcode/README.assets/image-20220105224027339.png)
+![image-20220105224242005](README.assets/image-20220105224242005.png)
 
 在这就是 x = z
 
